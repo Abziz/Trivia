@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!--  Meta  -->
+    <meta charset="UTF-8" />
+    <title>My New Pen!</title>
+    <!--  Styles  -->
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/f24533ba21.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+</head>
+<body>
+    <div id="settings" class="container w-50">
+        <div class="row">
+            <div class="col-centered jumbotron w-100">
+                <h1 class="display-4">
+                    Shitty Trivia
+                </h1>
+                <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-centered w-100">
+                <div class="form-group">
+                    <label for="categories"> Select category:</label>
+                    <select class="form-control w-100" name="categories" id="categories">
+                        <option selected disabled>Select category</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="w-100 col-centered">
+                <label for="qType"> Select questions type:</label>
+                <div class="btn-group w-100" name="qType" data-toggle="buttons">
+
+                    <label class="w-50 btn btn-success ">
+                        <input type="radio" id="3" name="typeradio" autocomplete="off"> 4 Choices
+                    </label>
+                    <label class="w-50 btn btn-success">
+                        <input type="radio" id="2" name="typeradio" autocomplete="off"> True / False
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="w-100 col-centered">
+                <label class="w-100 btn btn-danger">
+                    <i class="fa fa-apple"></i>
+                    Start
+                </label>
+            </div>
+        </div>
+    </div>
+    <div id="trivia" class="container w-50">
+        <div class="row">
+            <div class="alert alert-danger col-md-5 col-centered w-50" role="alert">
+                <strong>Score:</strong>
+            </div>
+            <div class="alert alert-info col-md-5 col-centered w-50" role="alert">
+                <strong>Level:</strong>
+            </div>
+        </div>
+        <div class="row">
+            <div name="points" class="progress w-100">
+                <div class="progress-bar progress-bar-striped bg-warning no-sh" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- main script-->
+    <script type="text/javascript" src="/scripts/index.js"></script>
+</body>
+</html>
