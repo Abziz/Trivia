@@ -37,10 +37,10 @@
                 <label for="qType"> Select questions type:</label>
                 <div class="btn-group w-100" name="qType" data-toggle="buttons">
 
-                    <label class="w-50 btn btn-outline-primary active h5">
+                    <label class="w-50 btn btn-outline-info active h5">
                         <input type="radio" name="typeradio" autocomplete="off" checked> 4 CHOICES
                     </label>
-                    <label class="w-50 btn btn-outline-primary h5">
+                    <label class="w-50 btn btn-outline-info h5">
                         <input type="radio" name="typeradio" autocomplete="off"> TRUE OR FALSE
                     </label>
                 </div>
@@ -57,6 +57,11 @@
         <div class="card text-center w-100">
             <div class="card-header">
                 Category
+            </div>
+            <div class="card-block w-100">
+                <div class="progress" id="points">
+                    <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" style="width: 75%"></div>
+                </div>
             </div>
             <div class="card-block w-100">
                 <h4 class="card-title">Question number</h4>
@@ -83,6 +88,14 @@
                 </div>
             </div>
             <br />
+            <small class="text-muted"> You can answer by clicking one of the choices.</small>
+            <br />
+            <div class="card-block w-100">
+                <div class="progress" id="time">
+                    <div class="progress-bar progress-bar-striped bg-info  progress-bar-animated" role="progressbar" style="width: 75%"></div>
+                </div>
+            </div>
+
             <div class="card-footer">
                 <div class="btn-group w-100" name="stats" data-toggle="">
                     <label class="w-50 border-right-0 btn btn-outline-primary">
@@ -96,9 +109,6 @@
                         <i class="fa fa-heart"></i>
                         <i class="fa fa-heart"></i>
                     </label>
-                </div>
-                <div name="points" class="progress w-100">
-                    <div class="progress-bar progress-bar-striped bg-warning no-sh progress-bar-animated" role="progressbar" style="width: 75%"></div>
                 </div>
             </div>
         </div>

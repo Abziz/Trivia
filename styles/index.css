@@ -8,5 +8,9 @@
 }
 
 .hide {
-    display: none !important;
+    display: none ;
+}
+
+.progress+.progress {
+    margin-top: 1rem;
 }
