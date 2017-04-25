@@ -1,4 +1,5 @@
-﻿$(document).ready(function () {
+﻿
+$(document).ready(function () {
     getCategories($("#categories"));
     $("#types").click(function () {
         var checkboxes = $(this).find("input :checked");
@@ -10,6 +11,10 @@
     $("#start").click(function () {
         $("#settings").fadeOut(0);
         $("#trivia").fadeIn(500);
+        $("#time").animate({ width: '100%' }, 20000, "linear", function () {
+            console.log("done");
+        });
+        
     });
 
 });
