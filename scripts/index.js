@@ -1,5 +1,17 @@
 ﻿$(document).ready(function () {
-     getCategories($("#categories"));
+    getCategories($("#categories"));
+    $("#types").click(function () {
+        var checkboxes = $(this).find("input :checked");
+        console.log(checkboxes);
+        if (checkboxes.length == 0) {
+            
+        }
+    });
+    $("#start").click(function () {
+        $("#settings").fadeOut(0);
+        $("#trivia").fadeIn(500);
+    });
+
 });
 
 function getCategories(select) {
@@ -14,6 +26,8 @@ function getCategories(select) {
             select.append(option);
         }
     });
-
-
 }
+
+//$("#q_category").text($(this).find(":selected").text());
+
+
