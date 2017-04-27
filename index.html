@@ -6,6 +6,7 @@
     <meta charset="UTF-8" />
     <title>Suck a cock!</title>
     <!--  Styles  -->
+            
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/f24533ba21.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -78,6 +79,9 @@
             <small class="text-muted"> You can answer by clicking one of the choices.</small>
             <br />
             <div class="card-block w-100">
+                <div  id="alertmsg" class="alert alert-success text-center" role="alert">
+                    <strong id="text-alert">Correct!</strong>
+                </div>
                 <div class="progress" >
                     <div id="time" class="progress-bar progress-bar-striped bg-info  progress-bar-animated" role="progressbar" style="width: 0%"></div>
                 </div>
@@ -85,16 +89,13 @@
 
             <div class="card-footer">
                 <div class="btn-group w-100" name="stats" data-toggle="">
-                    <label class="w-50 border-right-0 btn btn-outline-primary">
-                        Score
+                    <label id="score" class="w-50 border-right-0 btn btn-outline-primary">
+                        0
                     </label>
-                    <label class="w-50 btn btn-outline-success">
-                        Level
+                    <label id="level" class="w-50 btn btn-outline-success">
+                        EASY
                     </label>
-                    <label class="border-left-0 w-50 btn btn-outline-danger">
-                        <i class="fa fa-heart text-danger animated pulse infinite"></i>
-                        <i class="fa fa-heart text-danger animated pulse infinite"></i>
-                        <i class="fa fa-heart text-danger animated pulse infinite"></i>
+                    <label id="life" class="border-left-0 w-50 btn btn-outline-danger">
                     </label>
                 </div>
             </div>
