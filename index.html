@@ -33,15 +33,17 @@
             <div class="card-block w-100 text-center">
                 <div class="form-group">
                     <label for="categories" class="text-muted">Select category:</label>
-                    <select class="form-control-lg w-100 custom-select " name="categories" id="categories"></select>
+                    <select class="form-control-lg w-100 custom-select " name="categories" id="categories">
+                        <option value="any">Any Category</option>
+                    </select>
                 </div>
                 <label for="qType" class="text-muted"> Select questions type:</label>
                 <div class="btn-group w-100" name="qType" id="types" data-toggle="buttons">
-                    <label class="w-50 btn btn-lg btn-outline-info active h5">
-                        <input type="checkbox" name="options[]" autocomplete="off" checked> 4 CHOICES
+                    <label class="w-50 btn btn-lg typecheck btn-outline-info active h5">
+                        <input type="checkbox" value="multiple"  name="options[]" autocomplete="off" checked> 4 CHOICES
                     </label>
-                    <label class="w-50 btn btn-lg btn-outline-info h5">
-                        <input type="checkbox" name="options[]" autocomplete="off"> TRUE OR FALSE
+                    <label class="w-50 btn btn-lg typecheck btn-outline-info h5">
+                        <input type="checkbox" value="boolean" name="options[]" autocomplete="off"> TRUE OR FALSE
                     </label>
                 </div>
                 <label for="start" class="text-muted">Only if you're not stupid:</label>
@@ -60,27 +62,16 @@
             </div>
             <div class="card-block w-100">
                 <div class="progress" id="points">
-                    <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" style="width: 75%"></div>
+                    <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" style="width: 0%"></div>
                 </div>
             </div>
             <div class="card-block w-100">
                 <p class="card-title" id="q_category">category</p>
-                <p class="card-text">The question itself</p>
+                <p class="card-text" id="q_text">The question itself</p>
             </div>
             <div class="row">
-                <div class="btn-group-vertical w-75 col-centered" data-toggle="">
-                    <span class="btn btn-secondary ">
-                        <small>Answer #1</small>
-                    </span>
-                    <span class="radio control-label btn btn-secondary">
-                        <small>Answer #2</small>
-                    </span>
-                    <span class="btn btn-secondary">
-                        <small>Answer #3</small>
-                    </span>
-                    <span class="btn btn-secondary">
-                        <small>Answer #4</small>
-                    </span>
+                <div id="q_answers" class="btn-group-vertical w-75 col-centered" data-toggle="">
+                    
                 </div>
             </div>
             <br />
@@ -101,9 +92,9 @@
                         Level
                     </label>
                     <label class="border-left-0 w-50 btn btn-outline-danger">
-                        <i class="fa fa-heart"></i>
-                        <i class="fa fa-heart"></i>
-                        <i class="fa fa-heart"></i>
+                        <i class="fa fa-heart text-danger animated pulse infinite"></i>
+                        <i class="fa fa-heart text-danger animated pulse infinite"></i>
+                        <i class="fa fa-heart text-danger animated pulse infinite"></i>
                     </label>
                 </div>
             </div>
