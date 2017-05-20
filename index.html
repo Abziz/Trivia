@@ -4,9 +4,9 @@
 
     <!--  Meta  -->
     <meta charset="UTF-8" />
-    <title>Suck a cock!</title>
+    <title>Trivia!</title>
     <!--  Styles  -->
-            
+
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/f24533ba21.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
@@ -23,14 +23,14 @@
     <div class="row w-100">&nbsp</div>
     <div id="settings" class="container w-75" style="height:95%">
         <div class="card w-100">
-            <h4 class="card-header text-center">Shitty Trivia</h4>
+            <h4 class="card-header text-center">Trivia</h4>
             <br />
             <div class="text-center card-text text-muted ">
                 <p>Set up the game and press <span class="text-success"><strong>START</strong></span> </p>
                 <p>Questions difficulty increases overtime, harder questions get you more <span class="text-warning"><strong>score</strong></span></p>
                 <p>You have 20 seconds for each question if you dont answer in time you lose one <i class="fa fa-heart text-danger animated pulse infinite"></i><br /></p>
                 <p>game is over when you're ran out of <span class="text-danger"><strong>lives</strong></span><br /></p>
-            </div> 
+            </div>
             <div class="card-block w-100 text-center">
                 <div class="form-group">
                     <label for="categories" class="text-muted">Select category:</label>
@@ -55,16 +55,11 @@
             </div>
         </div>
     </div>
-    
+
     <div id="trivia" class="container w-75" style="display:none">
         <div class="card text-center w-100">
             <div class="card-header" id="q_num">
                 Question number
-            </div>
-            <div class="card-block w-100">
-                <div class="progress" id="points">
-                    <div class="progress-bar progress-bar-striped bg-warning progress-bar-animated" role="progressbar" style="width: 0%"></div>
-                </div>
             </div>
             <div class="card-block w-100">
                 <p class="card-title" id="q_category">category</p>
@@ -72,7 +67,7 @@
             </div>
             <div class="row">
                 <div id="q_answers" class="btn-group-vertical w-75 col-centered" data-toggle="">
-                    
+
                 </div>
             </div>
             <br />
@@ -101,8 +96,18 @@
             </div>
         </div>
     </div>
+	<div id="gameover" class="container w-75" style="display:none">
+		<div class="card">
+			<div class="container">
+  				<h1>Game Over</h1>
+  				score:<span id="final_score">200</span>
+  				<p>click to play again</p>
+			</div>
+		</div>
+	</div>
+
     <div class="row w-100">&nbsp</div>
     <!-- main script-->
-    <script type="text/javascript" src="/scripts/index.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
 </body>
 </html>

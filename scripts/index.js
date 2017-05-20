@@ -20,8 +20,9 @@ $(document).ready(function () {
         $("#settings").fadeOut(0);
         $("#trivia").fadeIn(500);
         play();
-        
     });
+
+	$("#gameover").click(newGame);
 
 });
 
@@ -78,7 +79,7 @@ function nextQuestion() {
     $("#q_num").text("Question number " + game_info.questions);
     if (game_info.questions == 11) {
         game_info.level++;
-        
+
         $("#level").text("MEDIUM");
         urlHelper.difficulty = "difficulty=medium";
     }else if (game_info.questions == 21) {
@@ -106,7 +107,7 @@ function shuffle(array) {
 
 //https://opentdb.com/api.php?amount=11&category=12&difficulty=hard&type=multiple
 
-function setupOptions( callback ){ 
+function setupOptions( callback ){
     game_info = { score: 0, life: 5, questions: 0, level: 1 };
     urlHelper["amount"] = "amount=1";
     urlHelper["difficulty"] = "difficulty=easy";
@@ -121,7 +122,7 @@ function setupOptions( callback ){
     }else{
         urlHelper["type"] = "";
     }
-
+	$("#life").empty();
     for (var i = 0; i < game_info.life; i++) {
         $("#life").append(createHeart());
     }
@@ -190,14 +191,21 @@ function showMsg(msg) {
 }
 
 function gameOver() {
+   	game_info = { score: 0, life: 5, questions: 0, level: 1 };
     $("#trivia").toggle();
+	$("#gameover").toggle();
+	$("#final_score").text($("#score").text());
+}
+
+function newGame(){
+	$("#gameover").toggle();
     $("#settings").toggle();
     $("#score").text("0");
     $("#level").text("EASY");
 }
 //$("#q_category").text($(this).find(":selected").text());
 
-  
+
 function ShowAndHide(jqelem) {
     console.log($(jqelem))
     jqelem.fadeTo(1000, 1, function () {
